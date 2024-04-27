@@ -16,7 +16,7 @@
     "build": "tsc --build --verbose ",
     "build-exe": "tsc --build --verbose | pkg . --targets node18-linux-x64 --output ./bin/cardano-address-tools",
     "convert": "TS_NODE_PROJECT='tsconfig.json' tsx  ./src/convertAddressToPkh.ts",
-    "update-executable": "cp ./bin/cardano-address-tools ../../bin/cardano-address-tools"
+    "update-exe": "cp ./bin/cardano-address-tools ../../bin/cardano-address-tools"
 
   },
   "dependencies": {
