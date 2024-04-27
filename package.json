@@ -1,0 +1,25 @@
+{
+  "name": "cardano-address-tools",
+  "version": "1.0.0",
+  "description": "Cardano address tools",
+  "private": true,
+  "engines": {
+    "node": "^18"
+  },
+  "bin": "dist/convertAddressToPkh.js", 
+  "pkg": {
+    "targets": [
+      "node18-linux-x64"
+    ]
+  },
+  "scripts": {
+    "build": "tsc --build --verbose ",
+    "build-exe": "tsc --build --verbose | pkg . --targets node18-linux-x64 --output ./bin/cardano-address-tools",
+    "convert": "TS_NODE_PROJECT='tsconfig.json' tsx  ./src/convertAddressToPkh.ts"
+  },
+  "dependencies": {
+    "@emurgo/cardano-serialization-lib-nodejs": "^11.5.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.7.2"
+  }
+}
